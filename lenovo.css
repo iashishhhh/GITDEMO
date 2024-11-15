@@ -1,0 +1,21 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    padding-right: 0%;
+    padding-left: 0%;
+}
+
+.search {
+    width: 100%;
+}
+
+.img {
+    background-image: url(img/lenovo-yoga-hero-intel-2024.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+    margin-top: 0%;
+    margin-bottom: 0
+    ;
+}
