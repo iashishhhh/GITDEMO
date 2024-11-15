@@ -1,4 +1,4 @@
-# GITDEMO
-This is my git repo
+# Lenovo 
+ Clone Lenovo site
 <br>
 Author :-ashish chaudhary
