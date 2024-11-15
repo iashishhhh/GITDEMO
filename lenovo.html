@@ -17,42 +17,380 @@
 </head>
 
 <body>
-    <nav class="py-2 bg-light border-bottom ">
-        <div class="container d-flex flex-wrap">
-            <ul class="nav me-auto">
-                <li class="nav-item"><a href="#" class="nav-link link-dark px-2 active" aria-current="page">Home</a>
-                </li>
-                <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Features</a></li>
-                <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Pricing</a></li>
-                <li class="nav-item"><a href="#" class="nav-link link-dark px-2">FAQs</a></li>
-                <li class="nav-item"><a href="#" class="nav-link link-dark px-2">About</a></li>
-            </ul>
-            <ul class="nav">
-                <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Login</a></li>
-                <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Sign up</a></li>
-            </ul>
-        </div>
-    </nav>
-    <header class="py-3 mb-4 border-bottom sticky-top bg-light">
-        <div class="container-fluid d-flex flex-wrap justify-content-center">
-            <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
-                <svg class="bi me-2" width="40" height="32">
-                    <use xlink:href="#bootstrap"></use>
-                </svg>
-                <img src="logo/logo.avif" width="120px" height="40px" alt="">
-            </a>
-            <form class="col-12 col-lg-auto mb-3 mb-lg-0">
-                <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-            </form>
-        </div>
-    </header>
+    <html lang="en">
 
-    <div class="container-fluid w-100 overflow-hidden px-0 mt-0 pt-0 pb-3">
-        <div class="img pt-0 mt-0">
-            <h2 class="">Lenovo Yoga </h2>
-        </div>
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>
+            Email App
+        </title>
+        <script src="https://cdn.tailwindcss.com">
+        </script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap"
+            rel="stylesheet" />
+        <style>
+            body {
+                font-family: 'Roboto', sans-serif;
+            }
+        </style>
+    </head>
 
-    </div>
+    <body class="bg-gray-100">
+        <div class="min-h-screen flex flex-col">
+            <!-- Header -->
+            <header class="bg-blue-600 text-white p-4 flex justify-between items-center">
+                <div class="text-2xl font-bold">
+                    Email App
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        <i class="fas fa-plus">
+                        </i>
+                        Compose
+                    </button>
+                    <div class="relative">
+                        <input class="rounded-full py-2 px-4 pl-10 bg-white text-gray-700 focus:outline-none"
+                            placeholder="Search..." type="text" />
+                        <i class="fas fa-search absolute left-3 top-3 text-gray-500">
+                        </i>
+                    </div>
+                    <div class="relative">
+                        <img alt="User profile picture" class="rounded-full w-10 h-10" height="40"
+                            src="https://storage.googleapis.com/a1aa/image/gmRUsHk5X74YGFKFaFUyQVhtf16YlpeoHMmwz4D9YEFLFOxTA.jpg"
+                            width="40" />
+                    </div>
+                </div>
+            </header>
+            <!-- Main Content -->
+            <div class="flex flex-1">
+                <!-- Sidebar -->
+                <aside class="w-64 bg-white p-4 border-r">
+                    <nav class="space-y-2">
+                        <a class="flex items-center p-2 text-gray-700 hover:bg-gray-200 rounded" href="#">
+                            <i class="fas fa-inbox w-6">
+                            </i>
+                            <span class="ml-2">
+                                Inbox
+                            </span>
+                        </a>
+                        <a class="flex items-center p-2 text-gray-700 hover:bg-gray-200 rounded" href="#">
+                            <i class="fas fa-star w-6">
+                            </i>
+                            <span class="ml-2">
+                                Starred
+                            </span>
+                        </a>
+                        <a class="flex items-center p-2 text-gray-700 hover:bg-gray-200 rounded" href="#">
+                            <i class="fas fa-paper-plane w-6">
+                            </i>
+                            <span class="ml-2">
+                                Sent
+                            </span>
+                        </a>
+                        <a class="flex items-center p-2 text-gray-700 hover:bg-gray-200 rounded" href="#">
+                            <i class="fas fa-trash w-6">
+                            </i>
+                            <span class="ml-2">
+                                Trash
+                            </span>
+                        </a>
+                        <a class="flex items-center p-2 text-gray-700 hover:bg-gray-200 rounded" href="#">
+                            <i class="fas fa-folder w-6">
+                            </i>
+                            <span class="ml-2">
+                                Drafts
+                            </span>
+                        </a>
+                    </nav>
+                </aside>
+                <!-- Email List -->
+                <main class="flex-1 p-4">
+                    <div class="bg-white shadow rounded-lg p-4">
+                        <h2 class="text-xl font-bold mb-4">
+                            Inbox
+                        </h2>
+                        <ul class="space-y-4">
+                            <li class="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+                                <div class="flex items-center space-x-4">
+                                    <img alt="Sender profile picture" class="rounded-full w-10 h-10" height="40"
+                                        src="https://storage.googleapis.com/a1aa/image/LYXqoe0vCXQDfE1YEPfdkTl5eTl0zUPQINmJ7YmEtSqqU4EPB.jpg"
+                                        width="40" />
+                                    <div>
+                                        <h3 class="text-lg font-semibold">
+                                            John Doe
+                                        </h3>
+                                        <p class="text-gray-600">
+                                            Meeting at 3 PM
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="text-gray-500">
+                                    2 hours ago
+                                </div>
+                            </li>
+                            <li class="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+                                <div class="flex items-center space-x-4">
+                                    <img alt="Sender profile picture" class="rounded-full w-10 h-10" height="40"
+                                        src="https://storage.googleapis.com/a1aa/image/LYXqoe0vCXQDfE1YEPfdkTl5eTl0zUPQINmJ7YmEtSqqU4EPB.jpg"
+                                        width="40" />
+                                    <div>
+                                        <h3 class="text-lg font-semibold">
+                                            Jane Smith
+                                        </h3>
+                                        <p class="text-gray-600">
+                                            Project Update
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="text-gray-500">
+                                    4 hours ago
+                                </div>
+                            </li>
+                            <li class="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+                                <div class="flex items-center space-x-4">
+                                    <img alt="Sender profile picture" class="rounded-full w-10 h-10" height="40"
+                                        src="https://storage.googleapis.com/a1aa/image/LYXqoe0vCXQDfE1YEPfdkTl5eTl0zUPQINmJ7YmEtSqqU4EPB.jpg"
+                                        width="40" />
+                                    <div>
+                                        <h3 class="text-lg font-semibold">
+                                            Alice Johnson
+                                        </h3>
+                                        <p class="text-gray-600">
+                                            Lunch Tomorrow?
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="text-gray-500">
+                                    6 hours ago
+                                </div>
+                            </li>
+                            <li class="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+                                <div class="flex items-center space-x-4">
+                                    <img alt="Sender profile picture" class="rounded-full w-10 h-10" height="40"
+                                        src="https://storage.googleapis.com/a1aa/image/LYXqoe0vCXQDfE1YEPfdkTl5eTl0zUPQINmJ7YmEtSqqU4EPB.jpg"
+                                        width="40" />
+                                    <div>
+                                        <h3 class="text-lg font-semibold">
+                                            Bob Brown
+                                        </h3>
+                                        <p class="text-gray-600">
+                                            Weekly Report
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="text-gray-500">
+                                    8 hours ago
+                                </div>
+                            </li>
+                            <li class="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+                                <div class="flex items-center space-x-4">
+                                    <img alt="Sender profile picture" class="rounded-full w-10 h-10" height="40"
+                                        src="https://storage.googleapis.com/a1aa/image/LYXqoe0vCXQDfE1YEPfdkTl5eTl0zUPQINmJ7YmEtSqqU4EPB.jpg"
+                                        width="40" />
+                                    <div>
+                                        <h3 class="text-lg font-semibold">
+                                            Charlie Davis
+                                        </h3>
+                                        <p class="text-gray-600">
+                                            New Assignment
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="text-gray-500">
+                                    10 hours ago
+                                </div>
+                            </li>
+                            <li class="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+                                <div class="flex items-center space-x-4">
+                                    <img alt="Sender profile picture" class="rounded-full w-10 h-10" height="40"
+                                        src="https://storage.googleapis.com/a1aa/image/LYXqoe0vCXQDfE1YEPfdkTl5eTl0zUPQINmJ7YmEtSqqU4EPB.jpg"
+                                        width="40" />
+                                    <div>
+                                        <h3 class="text-lg font-semibold">
+                                            David Evans
+                                        </h3>
+                                        <p class="text-gray-600">
+                                            Client Feedback
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="text-gray-500">
+                                    12 hours ago
+                                </div>
+                            </li>
+                            <li class="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+                                <div class="flex items-center space-x-4">
+                                    <img alt="Sender profile picture" class="rounded-full w-10 h-10" height="40"
+                                        src="https://storage.googleapis.com/a1aa/image/LYXqoe0vCXQDfE1YEPfdkTl5eTl0zUPQINmJ7YmEtSqqU4EPB.jpg"
+                                        width="40" />
+                                    <div>
+                                        <h3 class="text-lg font-semibold">
+                                            Eve Foster
+                                        </h3>
+                                        <p class="text-gray-600">
+                                            Meeting Rescheduled
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="text-gray-500">
+                                    14 hours ago
+                                </div>
+                            </li>
+                            <li class="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+                                <div class="flex items-center space-x-4">
+                                    <img alt="Sender profile picture" class="rounded-full w-10 h-10" height="40"
+                                        src="https://storage.googleapis.com/a1aa/image/LYXqoe0vCXQDfE1YEPfdkTl5eTl0zUPQINmJ7YmEtSqqU4EPB.jpg"
+                                        width="40" />
+                                    <div>
+                                        <h3 class="text-lg font-semibold">
+                                            Frank Green
+                                        </h3>
+                                        <p class="text-gray-600">
+                                            Budget Approval
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="text-gray-500">
+                                    16 hours ago
+                                </div>
+                            </li>
+                            <li class="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+                                <div class="flex items-center space-x-4">
+                                    <img alt="Sender profile picture" class="rounded-full w-10 h-10" height="40"
+                                        src="https://storage.googleapis.com/a1aa/image/LYXqoe0vCXQDfE1YEPfdkTl5eTl0zUPQINmJ7YmEtSqqU4EPB.jpg"
+                                        width="40" />
+                                    <div>
+                                        <h3 class="text-lg font-semibold">
+                                            Grace Harris
+                                        </h3>
+                                        <p class="text-gray-600">
+                                            Team Outing
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="text-gray-500">
+                                    18 hours ago
+                                </div>
+                            </li>
+                            <li class="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+                                <div class="flex items-center space-x-4">
+                                    <img alt="Sender profile picture" class="rounded-full w-10 h-10" height="40"
+                                        src="https://storage.googleapis.com/a1aa/image/LYXqoe0vCXQDfE1YEPfdkTl5eTl0zUPQINmJ7YmEtSqqU4EPB.jpg"
+                                        width="40" />
+                                    <div>
+                                        <h3 class="text-lg font-semibold">
+                                            Hank Irving
+                                        </h3>
+                                        <p class="text-gray-600">
+                                            New Policy
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="text-gray-500">
+                                    20 hours ago
+                                </div>
+                            </li>
+                            <li class="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+                                <div class="flex items-center space-x-4">
+                                    <img alt="Sender profile picture" class="rounded-full w-10 h-10" height="40"
+                                        src="https://storage.googleapis.com/a1aa/image/LYXqoe0vCXQDfE1YEPfdkTl5eTl0zUPQINmJ7YmEtSqqU4EPB.jpg"
+                                        width="40" />
+                                    <div>
+                                        <h3 class="text-lg font-semibold">
+                                            Ivy Johnson
+                                        </h3>
+                                        <p class="text-gray-600">
+                                            Holiday Plans
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="text-gray-500">
+                                    22 hours ago
+                                </div>
+                            </li>
+                            <li class="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+                                <div class="flex items-center space-x-4">
+                                    <img alt="Sender profile picture" class="rounded-full w-10 h-10" height="40"
+                                        src="https://storage.googleapis.com/a1aa/image/LYXqoe0vCXQDfE1YEPfdkTl5eTl0zUPQINmJ7YmEtSqqU4EPB.jpg"
+                                        width="40" />
+                                    <div>
+                                        <h3 class="text-lg font-semibold">
+                                            Jack King
+                                        </h3>
+                                        <p class="text-gray-600">
+                                            Performance Review
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="text-gray-500">
+                                    1 day ago
+                                </div>
+                            </li>
+                            <li class="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+                                <div class="flex items-center space-x-4">
+                                    <img alt="Sender profile picture" class="rounded-full w-10 h-10" height="40"
+                                        src="https://storage.googleapis.com/a1aa/image/LYXqoe0vCXQDfE1YEPfdkTl5eTl0zUPQINmJ7YmEtSqqU4EPB.jpg"
+                                        width="40" />
+                                    <div>
+                                        <h3 class="text-lg font-semibold">
+                                            Karen Lee
+                                        </h3>
+                                        <p class="text-gray-600">
+                                            Invoice
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="text-gray-500">
+                                    2 days ago
+                                </div>
+                            </li>
+                            <li class="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+                                <div class="flex items-center space-x-4">
+                                    <img alt="Sender profile picture" class="rounded-full w-10 h-10" height="40"
+                                        src="https://storage.googleapis.com/a1aa/image/LYXqoe0vCXQDfE1YEPfdkTl5eTl0zUPQINmJ7YmEtSqqU4EPB.jpg"
+                                        width="40" />
+                                    <div>
+                                        <h3 class="text-lg font-semibold">
+                                            Leo Martin
+                                        </h3>
+                                        <p class="text-gray-600">
+                                            Contract Signed
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="text-gray-500">
+                                    3 days ago
+                                </div>
+                            </li>
+                            <li class="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+                                <div class="flex items-center space-x-4">
+                                    <img alt="Sender profile picture" class="rounded-full w-10 h-10" height="40"
+                                        src="https://storage.googleapis.com/a1aa/image/LYXqoe0vCXQDfE1YEPfdkTl5eTl0zUPQINmJ7YmEtSqqU4EPB.jpg"
+                                        width="40" />
+                                    <div>
+                                        <h3 class="text-lg font-semibold">
+                                            Mona Nelson
+                                        </h3>
+                                        <p class="text-gray-600">
+                                            Follow Up
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="text-gray-500">
+                                    4 days ago
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </body>
+
+    </html>
+
 </body>
 
 </html>
